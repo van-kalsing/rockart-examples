@@ -45,6 +45,11 @@ setuptools.setup(
     },
     zip_safe=True,
     packages=["rockart_examples"],
+    entry_points={
+        "console_scripts": [
+            "rockart-life = rockart_examples.life.entry:entry",
+        ],
+    },
     python_requires=">=3.6.9",
     install_requires=["rockart==0.2.*"],
     setup_requires=["setuptools_scm==3.2.0"],
