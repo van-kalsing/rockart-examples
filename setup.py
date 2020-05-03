@@ -44,7 +44,7 @@ setuptools.setup(
         "Source Code": "https://github.com/van-kalsing/rockart-examples",
     },
     zip_safe=True,
-    packages=["rockart_examples"],
+    packages=["rockart_examples", "rockart_examples.life"],
     entry_points={
         "console_scripts": [
             "rockart-life = rockart_examples.life.entry:entry",
