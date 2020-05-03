@@ -1,4 +1,4 @@
-from rockart_examples.life.entry import main
+from rockart_examples.life.gui import run_gui
 
 
-__all__ = ["main"]
+__all__ = ["run_gui"]

@@ -1,10 +1,8 @@
 import argparse
 
-from rockart_examples import __version__
+from rockart_examples import __version__, RockartExamplesException
+from rockart_examples.life.gui import run_gui
 
-
-def main():
-    pass
 
 def entry():
     parser = \
@@ -20,5 +18,9 @@ def entry():
         )
     parser.parse_args()
 
-    exit_code_or_message = main()
-    return exit_code_or_message
+    try:
+        run_gui()
+    except RockartExamplesException as e:
+        return str(e)
+    except:  # noqa
+        return "Unknown error occurred"
